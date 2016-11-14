@@ -16,7 +16,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header navbar-defalt">
-          <a class="navbar-brand" href="index.php">CS143 DataBase Query System (Demo)</a>
+          <a class="navbar-brand" href="index.html">Movie Database System</a>
         </div>
       </div>
     </nav>
@@ -25,16 +25,11 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <p>&nbsp;&nbsp;Add new content</p>
-            <li><a href="main.php">Add Actor/Director</a></li>
+            <p>&nbsp;&nbsp;Add New Content</p>
+            <li><a href="add_actor_director.php">Add Actor/Director</a></li>
             <li><a href="add_movie.php">Add Movie Information</a></li>
             <li><a href="add_movie_actor.php">Add Movie/Actor Relation</a></li>
             <li><a href="add_movie_director.php">Add Movie/Director Relation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <p>&nbsp;&nbsp;Browsering Content :</p>
-            <li><a href="Show_A.php">Show Actor Information</a></li>
-            <li><a href="Show_M.php">Show Movie Information</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <p>&nbsp;&nbsp;Search Interface:</p>
@@ -42,7 +37,7 @@
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h3>Add new Movie</h3>
+            <h3>Add New Movie</h3>
             <form method="GET" action="add_movie.php">
                 <div class="form-group">
                   <label for="title">Title:</label>
@@ -89,7 +84,7 @@
                     <input type="checkbox" name="genre[]" value="War">War</input>
                     <input type="checkbox" name="genre[]" value="Western">Western</input>
                 </div>
-                <button type="submit" class="btn btn-default">Add!</button>
+                <button type="submit" class="btn btn-info">Add</button>
             </form>
 <?php
 
@@ -108,8 +103,9 @@ if($_SERVER["REQUEST_METHOD"] == "GET")
     $genre=$_GET['genre'];
 
     if(!empty($title)){
+      echo "<br/>";
       echo "Add Success!<br/>";
-      echo $company;
+    //  echo $company;
 
     if (!($id = $db->query("SELECT id From MaxMovieID"))){
         $errmsg = $db->error;

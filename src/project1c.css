@@ -5,12 +5,19 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
+  font-family: cursive;
+  color: #000099;
 }
 
 
 /*
  * Global add-ons
  */
+.navbar-inverse {
+    background-color: #191970;
+    border-color: #080808;
+}
+
 
 .sub-header {
   padding-bottom: 10px;
@@ -44,7 +51,7 @@ body {
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
+    background-color: #eeeeff;
     border-right: 1px solid #eee;
   }
 }
@@ -62,8 +69,8 @@ body {
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
-  color: #fff;
-  background-color: #428bca;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 
